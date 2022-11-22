@@ -1,0 +1,65 @@
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Available_T.V</title>
+<!--                                                      page title-->
+    <link href="static/result.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>RESULTS</h1>
+<!--                                             this line is heading for page-->
+    <div>
+        <table>
+            <tr>
+                <th>T.V_name</th>
+                <th>T.V_rating</th>
+                <th>T.V_price</th>
+                <th>T.V_reweverName</th>
+                <th>T.V_headComment</th>
+<!--                                              here mention with <th></th> tags are all table headings-->
+                <th>T.V_mainComment</th>
+
+
+
+            </tr>
+            {%for review in reviews %}
+            <tr class="tab">
+                <td>
+                    {{review['TvName']}}
+                </td>
+                <td>
+                    {{review['TvRating']}}
+                </td>
+<!--                         Here mentioned with <td></td>tags are display the content of the product-->
+                <td>
+                    {{review['TvPrice']}}
+                </td>
+                <td>
+                    {{review['TvRewever_name']}}
+                </td>
+                <td>
+                    {{review['TvHead_Comment ']}}
+                </td>
+                <td>
+                    {{review['TvMain_Comment']}}
+                </td>
+
+
+
+
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
+
+
